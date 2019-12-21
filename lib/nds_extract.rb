@@ -29,7 +29,7 @@ def gross_for_director(director_data)
   total = 0
 
   # Since the director_data is an array, I use the each method to iterate and add to the total variable
-  director_data[:movies].each do |movie| 
+  director_data[:movies].each do |movie|
     total += movie[:worldwide_gross]
   end
 
