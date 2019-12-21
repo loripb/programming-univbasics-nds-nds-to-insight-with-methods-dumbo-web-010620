@@ -21,7 +21,6 @@ def directors_totals(nds)
     movie_gross_sum = 0 # resets the sum for next iteration
   end
   p result
-  nil
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
