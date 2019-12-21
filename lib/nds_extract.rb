@@ -6,11 +6,34 @@ require 'directors_database'
 # { directorOne => allTheMoneyTheyMade, ... }
 
 def directors_totals(nds)
-  result = {}
+  result          = {}
+  movie_gross_sum = 0
+  director_index  = 0
+
+  while director_index < nds.length
+    director_name = nds[director_index][:name] # stores directors name in a variable
+
+    movie_gross_sum = gross_for_director(nds[director_index][:movies])
+
+    result[director_name] = movie_gross_sum # Adds directors name and movie_gross to hash
+
+    director_index += 1
+    movie_gross_sum = 0 # resets the sum for next iteration
+  end
+  p result
   nil
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
 def gross_for_director(director_data)
+  movie_index = 0
+  gross = 0
+
+  while movie_index < director_data.length
+    print director_data[0][:worldwide_gross] # stores worldwide_gross in a variable
+    movie_index     += 1
+  end
+
+  gross
 end
