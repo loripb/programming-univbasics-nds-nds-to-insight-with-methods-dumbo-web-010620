@@ -13,7 +13,7 @@ def directors_totals(nds)
   while director_index < nds.length
     director_name = nds[director_index][:name] # stores directors name in a variable
 
-    movie_gross_sum = gross_for_director(nds[director_index][:movies])
+    movie_gross_sum = gross_for_director(nds[director_index])
 
     result[director_name] = movie_gross_sum # Adds directors name and movie_gross to hash
 
