@@ -31,8 +31,8 @@ def gross_for_director(director_data)
   gross = 0
 
   while movie_index < director_data.length
-    print director_data[0][:worldwide_gross] # stores worldwide_gross in a variable
-    movie_index     += 1
+    print director_data[movie_index][:worldwide_gross] # stores worldwide_gross in a variable
+    movie_index += 1
   end
 
   gross
